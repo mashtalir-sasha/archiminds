@@ -1,0 +1,212 @@
+@import "vars"
+
+
+/*==========  Desktop First  ==========*/
+
+
+//Extra large: ≥1440px
++media-breakpoint-down(xl)
+	.head
+		&-img
+			&_2
+				margin-left: -50px
+			&_5
+				margin-left: -50px
+
+//Large: ≥1200px  max-width: 1439px
++media-breakpoint-down(lg)
+	.head
+		&-ttl
+			&__subttl
+				margin-right: 0
+				margin-bottom: 20px
+			&__line
+				&:before
+					width: 100px
+		&-img
+			&_2, &_5
+				margin-left: 0
+	.calc
+		&-ttl
+			&__line
+				&:before
+					width: 100px
+
+//Medium: ≥992px max-width: 1199px
++media-breakpoint-down(md)
+	.nav
+		&-note
+			font-size: 12px
+		&-btn
+			span
+				font-size: 14px
+	.services
+		&-item
+			&__wrap
+				min-height: 250px
+			&__btn
+				padding: 15px
+				span
+					font-size: 12px
+	.projects
+		&-item
+			&__btn
+				padding: 15px
+				span
+					font-size: 12px
+	.calc
+		&-img
+			margin-left: 0
+	.about
+		&-map
+			float: none
+	.project
+		width: 768px
+
+
+//Small: ≥768px max-width: 991px
++media-breakpoint-down(sm)
+	.sidebar
+		display: none
+	.content
+		width: 100%
+		float: none
+	.container-fluid
+		width: 100%
+		margin-right: auto
+	.grid
+		display: none
+	.nav
+		&-line
+			display: none
+		&-note
+			font-size: 14px
+			text-align: right
+	.head
+		&-img
+			&_2
+				margin-top: 40px
+			&_4
+				float: right
+				margin-top: -50px
+		&-form
+			float: none
+			margin: 0 auto
+	.projects
+		&-menu
+			&__item
+				padding: 5px 10px
+	.calc
+		.container-fluid
+			&:before
+				display: none
+		&-img
+			margin: 0 auto
+	.gallery
+		&-menu
+			&__item
+				padding: 5px 10px
+	.about
+		&-ttl
+		&-img
+			display: none
+		&-map
+			margin-top: 20px
+	.project
+		background-image: none
+		width: 100%
+		&-name
+			&:before
+				height: 300px
+		&-note
+			margin-top: 20px
+
+//Extra small: ≥576px max-width: 767px
++media-breakpoint-down(xs)
+	.head
+		&-ttl
+			&__ttl
+				font-size: 18px
+			&__subttl
+				font-size: 16px
+				max-width: 200px
+		&-item
+			&__numb
+				font-size: 36px
+			&__txt
+				font-size: 14px
+		&-form
+			padding: 20px
+			margin-top: 40px
+			&__ttl
+				font-size: 18px
+	.projects
+		&-menu
+			display: block
+			&__item
+				width: 100%
+				border: none
+				&.active
+					text-decoration: underline
+				&__btn
+					span
+						font-size: 14px
+	.services
+		&-item
+			&__btn
+				span
+					font-size: 14px
+	.calc
+		background: none
+		&-ttl
+			&__ttl
+				font-size: 22px
+			&__subttl
+				font-size: 16px
+	.gallery
+		&-menu
+			display: block
+			&__item
+				width: 100%
+				border: none
+				&.active
+					text-decoration: underline
+	.about
+		background: none
+	.count
+		.container-fluid
+			padding: 0 10px
+			&:before, &:after
+				display: none
+		&-ttl
+			&__ttl
+				font-size: 22px
+		&-txt
+			font-size: 16px
+			text-align: center
+	.reviews
+		.container-fluid
+			&:before
+				display: none
+		&-ttl
+			font-size: 30px
+			text-align: center
+	.foot
+		&-block
+			width: 100%
+			padding: 30px 30px 150px 30px
+			margin-left: 0
+			&__ttl
+				font-size: 30px
+				text-align: center
+	.project
+		padding: 30px 0
+		&-name
+			&:before
+				display: none
+		&-note
+			padding: 20px
+
+//Extra small: >0 max-width: 575px
++media-breakpoint-down(xxs)
+

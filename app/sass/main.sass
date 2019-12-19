@@ -1,0 +1,1370 @@
+@import "vars"
+@import "fonts"
+@import "libs"
+
+::placeholder
+	color: #D6D6D6
+
+::selection
+	background-color: $accent
+	color: #fff
+
+html, body
+	height: 100%
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.25
+	font-family: $default-font
+	overflow-x: hidden
+	background-color: #fff
+	input, textarea
+		outline: none
+
+img
+	display: block
+	max-width: 100%
+	height: auto
+
+h1, h2, h3, h4, h5, h6
+	font-weight: normal
+
+a:hover
+	text-decoration: none
+	color: initial
+
+a:focus
+	outline: none
+
+button
+	border: none
+	background-color: transparent
+	outline: none
+	&:focus
+		outline: none
+
+.sidebar
+	width: 100px
+	min-height: 100vh
+	background-color: #FCFCFC
+	position: fixed
+	top: 0
+	left: 0
+
+#top-menu
+	list-style-type: none
+	padding-left: 0
+	margin-bottom: 0
+	position: absolute
+	top: 50%
+	margin-top: -147px
+	left: 50%
+	margin-left: -25px
+	li
+		display: none
+		&.active
+			display: block
+		.this
+			display: block
+			width: 50px
+			text-align: center
+			font-family: $firm2
+			font-size: 22px
+			color: $accent
+			transform: rotate(-90deg)
+		a
+			display: block
+			width: 1px
+			height: 200px
+			background-color: $accent
+			margin: 20px 24px
+		.next
+			display: block
+			width: 50px
+			text-align: center
+			font-family: $firm3
+			font-size: 22px
+			color: $accent
+			transform: rotate(-90deg)
+
+.content
+	width: calc(100% - 100px)
+	float: right
+	overflow-y: hidden
+	overflow-x: hidden
+
+.container-fluid
+	width: calc(100% - 100px)
+	margin-right: 100px
+
+.grid
+	position: fixed
+	left: 100px
+	top: 0
+	width: calc(100% - 200px)
+	height: 100vh
+	margin-right: 100px
+	.line
+		position: absolute
+		top: 0
+		width: 1px
+		height: 100%
+		background-color: rgba(#C4C4C4 ,.25)
+		&_1
+			left: 0
+		&_2
+			left: 33.33333%
+		&_3
+			left: 66.66667%
+		&_4
+			right: 0
+
+.nav
+	padding-top: 10px
+	&-logo
+		max-width: 108px
+	&-note
+		font-family: $firm3
+		text-transform: uppercase
+		text-align: center
+		font-size: 16px
+		letter-spacing: -0.02em
+		margin-bottom: 10px
+		span
+			display: block
+			font-family: $firm2
+			color: $accent
+	&-line
+		position: relative
+		width: 100%
+		height: 3px
+		background-color: #C4C4C4
+		margin-bottom: 1.5px
+		&:before
+			content: ''
+			width: 50px
+			height: 6px
+			background-color: #464C4E
+			position: absolute
+			left: 50%
+			margin-left: -25px
+			top: -1.5px
+	&-btn
+		position: relative
+		float: right
+		border: 1px solid #888A8A
+		border-left: none
+		border-right: none
+		padding: 15px 40px
+		margin-right: 12px
+		span
+			font-family: $firm2
+			font-size: 18px
+			letter-spacing: .025em
+			line-height: 1
+			color: $accent
+		&__line
+			display: block
+			position: absolute
+			top: 50%
+			margin-top: -0.5px
+			left: -12px
+			width: 24px
+			height: 1px
+			background-color: #C4C4C4
+			&_l2
+				left: inherit
+				right: -12px
+			&:before
+				content: ''
+				width: 1px
+				height: 12px
+				background-color: #888A8A
+				position: absolute
+				top: -25px
+				left: 12px
+			&:after
+				content: ''
+				width: 1px
+				height: 12px
+				background-color: #888A8A
+				position: absolute
+				bottom: -26px
+				left: 12px
+		&:hover
+			border-color: #2D58CB
+			background: linear-gradient(180deg, #206DFB 0%, #053FB3 100%), #2D58CB
+			box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+			span
+				color: #fff
+			.nav-btn__line
+				display: none
+
+.head
+	padding: 50px 0
+	background-image: url(../img/head-bg.jpg)
+	background-size: cover
+	background-position: bottom center
+	min-height: 100vh
+	&-ttl
+		position: relative
+		padding: 20px 0px 20px 35px
+		&__ttl
+			max-width: 430px
+			font-family: $firm2
+			font-size: 28px
+			text-transform: uppercase
+		&__subttl
+			font-family: $light
+			font-size: 22px
+			max-width: 270px
+			float: right
+			margin-right: 60px
+		&__line
+			height: 100%
+			width: 1px
+			background-color: #0A0A0A
+			position: absolute
+			top: 0
+			left: 0
+			&:after
+				content: ''
+				width: 45px
+				height: 1px
+				background-color: #0A0A0A
+				position: absolute
+				top: 0
+				left: 0
+			&:before
+				content: ''
+				width: 180px
+				height: 1px
+				background-color: #0A0A0A
+				position: absolute
+				bottom: 0
+				left: 0
+	&-item
+		&_mt40
+			margin-top: 40px
+		&__numb
+			display: block
+			position: relative
+			font-family: $firm3
+			font-size: 72px
+			line-height: 1
+			color: $accent
+			margin-bottom: 5px
+			&:before
+				content: ''
+				width: 60px
+				height: 2px
+				background-color: #464C4E
+				position: absolute
+				bottom: 0
+				left: 0
+		&__txt
+			font-family: $light
+			font-size: 17px
+			max-width: 130px
+	&-form
+		max-width: 430px
+		float: right
+		padding: 50px
+		background: linear-gradient(.37deg,rgba(47, 117, 234, .53) .24%,rgba(7,71,203,.53) 99.64%),rgba(45, 88, 203, .53)
+		box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.25)
+		&__ttl
+			position: relative
+			font-size: 22px
+			color: #fff
+			text-align: center
+			padding-bottom: 20px
+			margin-bottom: 20px
+			&:before
+				content: ''
+				width: 300px
+				height: 1px
+				background-color: #fff
+				position: absolute
+				bottom: 0
+				left: 50%
+				margin-left: -150px
+		&__txt
+			font-family: $firm3
+			color: #fff
+			text-align: center
+			margin-bottom: 20px
+		.rline
+			position: relative
+			margin-bottom: 20px
+		.rfield_error
+			visibility: hidden
+			position: absolute
+			bottom: 3px
+			right: 0
+			font-size: 11px
+			color: #f00
+		&__input
+			display: block
+			width: 100%
+			border: none
+			background-color: transparent
+			border-bottom: 2px solid #DDDDDD
+			color: #D6D6D6
+			font-family: $medium
+			font-size: 18px
+			text-align: center
+			padding: 10px
+		&__btn
+			cursor: pointer
+			display: block
+			position: relative
+			border: 1px solid #fff
+			border-left: none
+			border-right: none
+			padding: 15px 40px
+			margin: 0 auto
+			span
+				font-family: $firm2
+				font-size: 14px
+				text-transform: uppercase
+				letter-spacing: .025em
+				line-height: 1
+				color: #fff
+			&:hover
+				background-color: #fff
+				box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+				span
+					color: $accent
+				.head-form__line
+					display: none
+		&__line
+			display: block
+			position: absolute
+			top: 50%
+			margin-top: -0.5px
+			left: -12px
+			width: 24px
+			height: 1px
+			background-color: #fff
+			&_l2
+				left: inherit
+				right: -12px
+			&:before
+				content: ''
+				width: 1px
+				height: 12px
+				background-color: #fff
+				position: absolute
+				top: -25px
+				left: 12px
+			&:after
+				content: ''
+				width: 1px
+				height: 12px
+				background-color: #fff
+				position: absolute
+				bottom: -26px
+				left: 12px
+	&-img
+		&_1
+			position: relative
+			z-index: 2
+		&_2
+			margin-left: -100px
+		&_3
+			position: relative
+			z-index: 2
+			margin-left: -50px
+		&_4
+			margin-top: -50px
+			margin-left: -100px
+			margin-bottom: 40px
+		&_5
+			margin-top: 40px
+			margin-left: -200px
+
+.services
+	padding: 50px 0
+	&-ttl
+		font-family: $firm3
+		font-size: 36px
+		text-align: center
+		span
+			color: $accent
+			text-transform: uppercase
+	&-item
+		position: relative
+		max-width: 80%
+		margin-left: 20%
+		margin-top: 140px
+		&:before
+			content: ''
+			width: 50%
+			height: 60%
+			border: 1px solid #000
+			position: absolute
+			top: -100px
+			left: -20%
+			z-index: -1
+		&_blue
+			&:before
+				border-color: $accent
+		&__wrap
+			overflow: hidden
+			min-height: 300px
+			background-size: cover
+			&_i1
+				background-image: url(../img/service-img1.jpg)
+			&_i2
+				background-image: url(../img/service-img2.jpg)
+			&_i3
+				background-image: url(../img/service-img3.jpg)
+			&_i4
+				background-image: url(../img/service-img4.jpg)
+			&_i5
+				background-image: url(../img/service-img5.jpg)
+			&_i6
+				background-image: url(../img/service-img6.jpg)
+		&__name
+			margin-top: 60px
+			font-family: $firm2
+			font-size: 18px
+			color: #323232
+			padding: 30px
+			background-color: rgba(255, 255, 255, 0.58)
+		&__numb
+			font-family: $firm3
+			font-size: 120px
+			line-height: 1
+			color: rgba(#535353, .51)
+			position: absolute
+			top: -75px
+			left: -45px
+		&__btn
+			cursor: pointer
+			display: table
+			position: relative
+			border: 1px solid $accent
+			border-left: none
+			border-right: none
+			padding: 15px 30px
+			margin: 20px auto 0
+			span
+				font-family: $firm2
+				font-size: 14px
+				text-transform: uppercase
+				letter-spacing: .025em
+				line-height: 1
+				color: $accent
+			&:hover
+				background: linear-gradient(180deg, #206DFB 0%, #053FB3 100%), #2D58CB
+				box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+				span
+					color: #fff
+				.services-item__line
+					display: none
+		&__line
+			display: block
+			position: absolute
+			top: 50%
+			margin-top: -0.5px
+			left: -12px
+			width: 24px
+			height: 1px
+			background-color: $accent
+			&_l2
+				left: inherit
+				right: -12px
+			&:before
+				content: ''
+				width: 1px
+				height: 12px
+				background-color: $accent
+				position: absolute
+				top: -25px
+				left: 12px
+			&:after
+				content: ''
+				width: 1px
+				height: 12px
+				background-color: $accent
+				position: absolute
+				bottom: -26px
+				left: 12px
+
+.projects
+	.container-fluid
+		position: relative
+		&:before
+			content: ''
+			width: 100%
+			height: 100%
+			max-height: 550px
+			background-color: #F5F5F5
+			position: absolute
+			top: -50px
+			left: 0
+	padding: 50px 0 30px
+	&-ttl
+		max-width: 550px
+		font-family: $firm3
+		font-size: 36px
+		color: #464C4E
+		margin-bottom: 40px
+		span
+			font-family: $firm2
+	&-menu
+		display: flex
+		justify-content: center
+		margin-bottom: 20px
+		&__item
+				position: relative
+				cursor: pointer
+				width: 200px
+				font-family: $firm3
+				font-size: 18px
+				text-align: center
+				color: #6A6A6A
+				border: none
+				border: 2px solid #544949
+				border-top: none
+				border-bottom: none
+				padding: 5px 20px
+				margin-left: -2px
+				&.active
+					color: $accent
+					border-color: $accent
+					z-index: 2
+				&:hover
+					color: $accent
+					border-color: $accent
+					z-index: 2
+	&-item
+		padding: 15px
+		background-color: #fff
+		box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25)
+		margin-bottom: 20px
+		&__img
+			width: 100%
+			min-height: 250px
+			background-size: cover
+			margin-bottom: 20px
+		&__name
+			font-family: $firm3
+			font-size: 24px
+			text-align: center
+			margin-bottom: 20px
+		&__btn
+			cursor: pointer
+			display: table
+			position: relative
+			border: 1px solid $accent
+			border-left: none
+			border-right: none
+			padding: 15px 30px
+			margin: 20px auto 0
+			span
+				font-family: $firm2
+				font-size: 14px
+				text-transform: uppercase
+				letter-spacing: .025em
+				line-height: 1
+				color: $accent
+			&:hover
+				background: linear-gradient(180deg, #206DFB 0%, #053FB3 100%), #2D58CB
+				box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+				span
+					color: #fff
+				.projects-item__line
+					display: none
+		&__line
+			display: block
+			position: absolute
+			top: 50%
+			margin-top: -0.5px
+			left: -12px
+			width: 24px
+			height: 1px
+			background-color: $accent
+			&_l2
+				left: inherit
+				right: -12px
+			&:before
+				content: ''
+				width: 1px
+				height: 12px
+				background-color: $accent
+				position: absolute
+				top: -25px
+				left: 12px
+			&:after
+				content: ''
+				width: 1px
+				height: 12px
+				background-color: $accent
+				position: absolute
+				bottom: -26px
+				left: 12px
+	&-tab
+		display: none
+		&.active
+			display: block
+
+.calc
+	background-image: url(../img/calc-bg.png)
+	background-position: bottom center
+	background-size: cover
+	padding: 50px 0
+	.container-fluid
+		position: relative
+		&:before
+			content: ''
+			width: 100%
+			height: 100%
+			max-height: 300px
+			background: linear-gradient(180deg, #2F75EA 0%, rgba(7, 71, 203, 0.53) 100%), #2D58CB
+			opacity: 0.9
+			position: absolute
+			top: 50%
+			margin-top: -150px
+			left: 0
+	&-ttl
+		position: relative
+		padding: 10px 0px 10px 30px
+		&__ttl
+			font-family: $firm2
+			font-size: 36px
+			text-transform: uppercase
+			color: #fff
+		&__subttl
+			font-family: $medium
+			font-size: 20px
+			color: #F5F5F5
+			max-width: 170px
+			float: right
+			margin-bottom: 40px
+		&__line
+			height: 100%
+			width: 2px
+			background-color: #E4E4E4
+			position: absolute
+			top: 0
+			left: 0
+			&:after
+				content: ''
+				width: 45px
+				height: 2px
+				background-color: #E4E4E4
+				position: absolute
+				top: 0
+				left: 0
+			&:before
+				content: ''
+				width: 180px
+				height: 2px
+				background-color: #E4E4E4
+				position: absolute
+				bottom: 0
+				left: 0
+	&-form
+		margin: 0 auto
+		background: #0A0B0B
+		backdrop-filter: blur(5px)
+		opacity: 0.9
+		padding: 40px 20px
+		.rline
+			position: relative
+			margin-bottom: 20px
+			&.last
+				margin-bottom: 0
+		.rfield_error
+			visibility: hidden
+			position: absolute
+			bottom: 3px
+			right: 0
+			font-size: 11px
+			color: #f00
+		&__input
+			display: block
+			width: 100%
+			border: none
+			background-color: transparent
+			border-bottom: 2px solid #B9B9B9
+			color: #B9B9B9
+			font-family: $medium
+			font-size: 18px
+			text-align: center
+			padding: 10px
+			::placeholder
+				color: #B9B9B9
+		&__btn
+			cursor: pointer
+			display: block
+			position: relative
+			border: 1px solid #fff
+			border-left: none
+			border-right: none
+			padding: 15px 40px
+			margin: 40px auto 0
+			span
+				font-family: $firm2
+				font-size: 14px
+				text-transform: uppercase
+				letter-spacing: .025em
+				line-height: 1
+				color: #fff
+			&:hover
+				background-color: #fff
+				box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+				span
+					color: $accent
+				.calc-form__line
+					display: none
+		&__line
+			display: block
+			position: absolute
+			top: 50%
+			margin-top: -0.5px
+			left: -12px
+			width: 24px
+			height: 1px
+			background-color: #fff
+			&_l2
+				left: inherit
+				right: -12px
+			&:before
+				content: ''
+				width: 1px
+				height: 12px
+				background-color: #fff
+				position: absolute
+				top: -25px
+				left: 12px
+			&:after
+				content: ''
+				width: 1px
+				height: 12px
+				background-color: #fff
+				position: absolute
+				bottom: -26px
+				left: 12px
+	&-img
+		margin-left: 50px
+
+.gallery
+	padding: 50px 0
+	&-ttl
+		font-family: $firm3
+		font-size: 36px
+		text-align: center
+		margin-bottom: 40px
+	&-menu
+		display: flex
+		justify-content: center
+		margin-bottom: 20px
+		&__item
+				position: relative
+				cursor: pointer
+				width: 200px
+				font-family: $firm3
+				font-size: 18px
+				text-align: center
+				color: #6A6A6A
+				border: none
+				border: 2px solid #544949
+				border-top: none
+				border-bottom: none
+				padding: 5px 20px
+				margin-left: -2px
+				&.active
+					color: $accent
+					border-color: $accent
+					z-index: 2
+				&:hover
+					color: $accent
+					border-color: $accent
+					z-index: 2
+	&-slider
+		&__slide
+			outline: none
+			margin: 0 10px
+			a
+				display: block
+				width: 100%
+				max-width: 280px
+				height: 270px
+				margin: 0 auto
+				background-size: cover
+				background-position: center center
+		.slick-arrow
+			cursor: pointer
+			position: absolute
+			top: 50%
+			margin-top: -27px
+			width: 54px
+			height: 54px
+			background: #2D2B2B
+			box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.15)
+			z-index: 2
+			font-size: 0
+			&.slick-prev
+				left: 0
+				&:before
+					content: ''
+					width: 11px
+					height: 20px
+					background-image: url(../img/arr-left.svg)
+					position: absolute
+					top: 50%
+					margin-top: -10px
+					left: 50%
+					margin-left: -5.5px
+			&.slick-next
+				right: 0
+				&:before
+					content: ''
+					width: 11px
+					height: 20px
+					background-image: url(../img/arr-right.svg)
+					position: absolute
+					top: 50%
+					margin-top: -10px
+					left: 50%
+					margin-left: -5.5px
+	position: relative
+	&-tab
+		position: relative
+		top: 0
+		left: 0
+		visibility: hidden
+		margin-bottom: -270px
+		&.active
+			position: relative
+			margin-bottom: 0
+			visibility: visible
+
+.posr
+	position: relative
+
+.about
+	padding: 50px 0
+	background-image: url(../img/about-bg.png)
+	background-position: bottom center
+	background-repeat: no-repeat
+	&-img
+		width: 419px
+		height: 81px
+		background-image: url(../img/about-name.png)
+		position: absolute
+		top: 0 
+		left: 0
+		z-index: 2
+	&-ttl
+		position: relative
+		font-family: $firm3
+		font-size: 36px
+		margin-bottom: 20px
+		span
+			color: $accent
+	&-txt
+		font-size: 14px
+		letter-spacing: .15em
+		margin-bottom: 40px
+		span
+			font-family: $firm2
+	&-subttl
+		font-size: 20px
+		font-family: $firm2
+		margin-bottom: 20px
+	&-list
+		&__item
+			font-size: 14px
+			letter-spacing: .15em
+			margin-bottom: 20px
+	&-note
+		font-size: 20px
+		font-family: $firm2
+		margin-bottom: 20px
+	&-slider
+		&__slide
+			outline: none
+			position: relative
+			overflow: hidden
+			&:before
+				content: ''
+				width: 190px
+				height: 250px
+				background: linear-gradient(180deg, #2F75EA 0%, rgba(7, 71, 203, 0.53) 100%), #2D58CB
+				position: absolute
+				top: 0
+				right: 50px
+				z-index: -1
+			img
+				margin-top: 50px
+		.slick-arrow
+			cursor: pointer
+			position: absolute
+			top: 50%
+			margin-top: -27px
+			width: 54px
+			height: 54px
+			background: #2D2B2B
+			box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.15)
+			z-index: 2
+			font-size: 0
+			&.slick-prev
+				left: -20px
+				&:before
+					content: ''
+					width: 11px
+					height: 20px
+					background-image: url(../img/arr-left.svg)
+					position: absolute
+					top: 50%
+					margin-top: -10px
+					left: 50%
+					margin-left: -5.5px
+			&.slick-next
+				right: -20px
+				&:before
+					content: ''
+					width: 11px
+					height: 20px
+					background-image: url(../img/arr-right.svg)
+					position: absolute
+					top: 50%
+					margin-top: -10px
+					left: 50%
+					margin-left: -5.5px
+		.slick-dots
+			display: table
+			list-style-type: none
+			padding-left: 0
+			margin-bottom: 0
+			overflow: hidden
+			margin: 20px auto
+			li
+				float: left
+				width: 30px
+				height: 4px
+				background-color: #ABABAB
+				font-size: 0
+				margin-right: 10px
+				&.slick-active
+					background-color: $accent
+	&-map
+		margin-top: 40px
+		float: right
+
+.count
+	padding: 50px 0
+	.container-fluid
+		position: relative
+		padding: 50px 10px 100px
+		&:before
+			content: ''
+			width: 100%
+			height: 100%
+			background-image: url(../img/count-bg.jpg)
+			background-position: center center
+			background-size: cover
+			position: absolute
+			top: 0
+			left: 0
+		&:after
+			content: ''
+			width: 60px
+			height: 230px
+			background: linear-gradient(180deg, #2F75EA 0%, rgba(7, 71, 203, 0.53) 100%), #2D58CB
+			position: absolute
+			top: -100px
+			right: 100px
+	&-ttl
+		position: relative
+		padding: 10px 30px 10px 0
+		max-width: 260px
+		margin: 0 auto 20px
+		&__ttl
+			font-family: $firm3
+			font-size: 36px
+			text-transform: uppercase
+			color: #fff
+		&__line
+			height: 100%
+			width: 2px
+			background-color: #E4E4E4
+			position: absolute
+			top: 0
+			right: 0
+			&:after
+				content: ''
+				width: 45px
+				height: 2px
+				background-color: #E4E4E4
+				position: absolute
+				top: 0
+				right: 0
+			&:before
+				content: ''
+				width: 180px
+				height: 2px
+				background-color: #E4E4E4
+				position: absolute
+				bottom: 0
+				right: 0
+	&-txt
+		position: relative
+		font-family: $firm3
+		font-size: 24px
+		color: #F1F1F1
+		margin-bottom: 40px
+	&-form
+		position: relative
+		z-index: 1
+		margin: 0 auto
+		padding: 40px 20px
+		&:before
+			content: ''
+			width: 100%
+			height: 100%
+			background: linear-gradient(180deg, #2F75EA 0%, rgba(7, 71, 203, 0.53) 100%), #2D58CB
+			opacity: 0.8
+			position: absolute
+			top: 0
+			left: 0
+		.rline
+			position: relative
+			margin-bottom: 20px
+			&.last
+				margin-bottom: 0
+		.rfield_error
+			visibility: hidden
+			position: absolute
+			bottom: 3px
+			right: 0
+			font-size: 11px
+			color: #f00
+		&__input
+			display: block
+			width: 100%
+			border: none
+			background-color: transparent
+			border-bottom: 2px solid #F1F1F1
+			color: #D6D6D6
+			font-family: $medium
+			font-size: 18px
+			text-align: center
+			padding: 10px
+			::placeholder
+				color: #D6D6D6
+		&__btn
+			cursor: pointer
+			display: block
+			position: relative
+			border: 1px solid #fff
+			border-left: none
+			border-right: none
+			padding: 15px 40px
+			margin: 40px auto 0
+			span
+				font-family: $firm2
+				font-size: 14px
+				text-transform: uppercase
+				letter-spacing: .025em
+				line-height: 1
+				color: #fff
+			&:hover
+				background-color: #fff
+				box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+				span
+					color: $accent
+				.count-form__line
+					display: none
+		&__line
+			display: block
+			position: absolute
+			top: 50%
+			margin-top: -0.5px
+			left: -12px
+			width: 24px
+			height: 1px
+			background-color: #fff
+			&_l2
+				left: inherit
+				right: -12px
+			&:before
+				content: ''
+				width: 1px
+				height: 12px
+				background-color: #fff
+				position: absolute
+				top: -25px
+				left: 12px
+			&:after
+				content: ''
+				width: 1px
+				height: 12px
+				background-color: #fff
+				position: absolute
+				bottom: -26px
+				left: 12px
+
+.reviews
+	padding: 50px 0
+	.container-fluid
+		position: relative
+		&:before
+			content: ''
+			width: 348px
+			height: 71px
+			background-image: url(../img/reviews-name.png)
+			position: absolute
+			top: 0
+			right: 20px
+	&-ttl
+		font-family: $firm3
+		font-size: 36px
+		margin-bottom: 20px
+	&-slider
+		padding: 0 40px
+		.slick-arrow
+			cursor: pointer
+			position: absolute
+			top: 50%
+			margin-top: -27px
+			width: 54px
+			height: 54px
+			background: #2D2B2B
+			box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.15)
+			z-index: 2
+			font-size: 0
+			&.slick-prev
+				left: 0
+				&:before
+					content: ''
+					width: 11px
+					height: 20px
+					background-image: url(../img/arr-left.svg)
+					position: absolute
+					top: 50%
+					margin-top: -10px
+					left: 50%
+					margin-left: -5.5px
+			&.slick-next
+				right: 0
+				&:before
+					content: ''
+					width: 11px
+					height: 20px
+					background-image: url(../img/arr-right.svg)
+					position: absolute
+					top: 50%
+					margin-top: -10px
+					left: 50%
+					margin-left: -5.5px
+	&-item
+		position: relative
+		outline: none
+		background: #FFFFFF
+		box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.25)
+		margin: 20px
+		padding: 20px
+		&:before
+			content: ''
+			width: 170px
+			height: 250px
+			background-color: #E5E5E5
+			position: absolute
+			bottom: -20px
+			right: -20px
+			z-index: -1
+		p
+			font-family: $light
+			font-size: 14px
+			margin-bottom: 10px
+		span
+			font-family: $medium
+			font-size: 14px
+
+.foot
+	position: relative
+	padding-top: 50px
+	.map
+		iframe
+			position: relative
+			width: 100%
+			height: 100%
+			min-height: 320px
+			z-index: 3
+	&-name
+		position: relative
+		float: right
+		margin-right: 20px
+		&:before
+			content: ''
+			width: 110%
+			height: 100%
+			background-color: #F0F0F0
+			position: absolute
+			top: 50px
+			left: -5%
+			z-index: -1
+	&-block
+		width: calc(100% + 40px)
+		margin-left: -40px
+		padding: 30px 0 200px 60px
+		background: #FFFFFF
+		box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25)
+		&__ttl
+			position: relative
+			z-index: 3
+			font-family: $firm3
+			font-size: 36px
+			margin-bottom: 40px
+		&__addr
+			position: relative
+			z-index: 3
+			padding-left: 45px
+			font-family: $firm3
+			font-size: 17px
+			margin-bottom: 20px
+			background-image: url(../img/addr.svg)
+			background-size: 32px 32px
+			background-position: left top
+			background-repeat: no-repeat
+			p
+				text-transform: uppercase
+				margin-bottom: 5px
+		&__phone, &__eml
+			position: relative
+			z-index: 3
+			padding-left: 45px
+			font-family: $firm3
+			font-size: 17px
+			margin-bottom: 20px
+			background-image: url(../img/phone.svg)
+			background-size: 32px 32px
+			background-position: left top
+			background-repeat: no-repeat
+			p
+				text-transform: uppercase
+				margin-bottom: 5px
+			a
+				display: block
+				color: #000
+		&__eml
+			background-image: url(../img/eml.svg)
+			margin-bottom: 0
+	&-img
+		z-index: 2
+		position: absolute
+		bottom: 155px
+		right: 0
+
+#modal
+	float: none
+
+.project
+	background-image: url(../img/project-bg.png)
+	background-position: top center
+	background-repeat: no-repeat
+	width: 1200px
+	padding: 40px
+	&-name
+		position: relative
+		max-width: 260px
+		font-family: $firm3
+		font-size: 24px
+		color: $accent
+		margin-bottom: 40px
+		&:before
+			content: ''
+			width: 120%
+			height: 500px
+			border: 1px solid $accent
+			position: absolute
+			top: -20%
+			left: -10%
+	&-slider
+		margin-bottom: 40px
+		&__slide
+			outline: none
+			img
+				margin: 0 auto
+		.slick-arrow
+			cursor: pointer
+			position: absolute
+			top: 50%
+			margin-top: -27px
+			width: 54px
+			height: 54px
+			background: #2D2B2B
+			box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.15)
+			z-index: 2
+			font-size: 0
+			&.slick-prev
+				left: -20px
+				&:before
+					content: ''
+					width: 11px
+					height: 20px
+					background-image: url(../img/arr-left.svg)
+					position: absolute
+					top: 50%
+					margin-top: -10px
+					left: 50%
+					margin-left: -5.5px
+			&.slick-next
+				right: -20px
+				&:before
+					content: ''
+					width: 11px
+					height: 20px
+					background-image: url(../img/arr-right.svg)
+					position: absolute
+					top: 50%
+					margin-top: -10px
+					left: 50%
+					margin-left: -5.5px
+		.slick-dots
+			display: table
+			list-style-type: none
+			padding-left: 0
+			margin-bottom: 0
+			overflow: hidden
+			margin: 20px auto
+			li
+				float: left
+				width: 30px
+				height: 4px
+				background-color: #ABABAB
+				font-size: 0
+				margin-right: 10px
+				&.slick-active
+					background-color: $accent
+	&-txt
+		font-family: $light
+		color: #333
+		span
+			font-family: $medium
+	&-note
+		padding: 40px
+		background-color: #F9F9F9
+		font-family: $light
+		font-size: 14px
+
+.dev
+	display: table
+	margin: 50px auto
+	img
+		max-width: 200px
+	span
+		color: #000
+		font-size: 12px
+		text-align: center
+		&:before
+			color: #000
+
+@import "media" // Always at the end
