@@ -40,6 +40,9 @@
 		&-btn
 			span
 				font-size: 14px
+	.head
+		&-form
+			margin-top: 40px
 	.services
 		&-item
 			&__wrap
@@ -83,20 +86,16 @@
 			font-size: 14px
 			text-align: right
 	.head
-		&-img
-			&_2
-				margin-top: 40px
-			&_4
-				float: right
-				margin-top: -50px
 		&-form
 			float: none
-			margin: 0 auto
+			margin: 40px auto 0
 	.projects
+		padding-bottom: 30px
 		&-menu
 			&__item
 				padding: 5px 10px
 	.calc
+		background-color: #0A0B0B
 		.container-fluid
 			&:before
 				display: none
@@ -124,6 +123,7 @@
 //Extra small: ≥576px max-width: 767px
 +media-breakpoint-down(xs)
 	.head
+		padding-bottom: 0
 		&-ttl
 			&__ttl
 				font-size: 18px
@@ -140,6 +140,10 @@
 			margin-top: 40px
 			&__ttl
 				font-size: 18px
+		&-img
+			height: 200px
+			&_1
+				margin-bottom: 20px
 	.projects
 		&-menu
 			display: block
@@ -157,12 +161,13 @@
 				span
 					font-size: 14px
 	.calc
-		background: none
 		&-ttl
 			&__ttl
 				font-size: 22px
 			&__subttl
 				font-size: 16px
+		&-img
+			margin-bottom: 20px
 	.gallery
 		&-menu
 			display: block
@@ -184,6 +189,10 @@
 		&-txt
 			font-size: 16px
 			text-align: center
+		&-form
+			&:before
+				opacity: 1
+				background-color: #0a0b0b
 	.reviews
 		.container-fluid
 			&:before

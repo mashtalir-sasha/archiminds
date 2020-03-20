@@ -204,9 +204,9 @@ button
 
 .head
 	padding: 50px 0
-	background-image: url(../img/head-bg.jpg)
-	background-size: cover
-	background-position: bottom center
+	//background-image: url(../img/head-bg.jpg)
+	//background-size: cover
+	//background-position: bottom center
 	min-height: 100vh
 	&-ttl
 		position: relative
@@ -246,8 +246,6 @@ button
 				bottom: 0
 				left: 0
 	&-item
-		&_mt40
-			margin-top: 40px
 		&__numb
 			display: block
 			position: relative
@@ -272,8 +270,9 @@ button
 		max-width: 430px
 		float: right
 		padding: 50px
-		background: linear-gradient(.37deg,rgba(47, 117, 234, .53) .24%,rgba(7,71,203,.53) 99.64%),rgba(45, 88, 203, .53)
-		box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.25)
+		//background: linear-gradient(.37deg,rgba(47, 117, 234, .53) .24%,rgba(7,71,203,.53) 99.64%),rgba(45, 88, 203, .53)
+		background: #0A0B0B
+		box-shadow: 5px 10px 10px rgba(10, 11, 11, 0.25)
 		&__ttl
 			position: relative
 			font-size: 22px
@@ -368,22 +367,17 @@ button
 				bottom: -26px
 				left: 12px
 	&-img
+		width: 100%
+		height: 300px
+		background-size: cover
+		background-position: center center
 		&_1
-			position: relative
-			z-index: 2
+			background-image: url(../img/head_img1.jpg)
 		&_2
-			margin-left: -100px
-		&_3
-			position: relative
-			z-index: 2
-			margin-left: -50px
-		&_4
-			margin-top: -50px
-			margin-left: -100px
-			margin-bottom: 40px
-		&_5
-			margin-top: 40px
-			margin-left: -200px
+			background-image: url(../img/head_img2.jpg)
+	&-video
+		max-width: 100%
+		margin: 20px 0
 
 .services
 	padding: 50px 0
@@ -507,7 +501,7 @@ button
 			position: absolute
 			top: -50px
 			left: 0
-	padding: 50px 0 30px
+	padding-top: 50px
 	&-ttl
 		max-width: 550px
 		font-family: $firm3
@@ -1010,7 +1004,8 @@ button
 			content: ''
 			width: 60px
 			height: 230px
-			background: linear-gradient(180deg, #2F75EA 0%, rgba(7, 71, 203, 0.53) 100%), #2D58CB
+			//background: linear-gradient(180deg, #2F75EA 0%, rgba(7, 71, 203, 0.53) 100%), #2D58CB
+			background: rgba(0, 0, 0, 0.53)
 			position: absolute
 			top: -100px
 			right: 100px
@@ -1062,7 +1057,8 @@ button
 			content: ''
 			width: 100%
 			height: 100%
-			background: linear-gradient(180deg, #2F75EA 0%, rgba(7, 71, 203, 0.53) 100%), #2D58CB
+			//background: linear-gradient(180deg, #2F75EA 0%, rgba(7, 71, 203, 0.53) 100%), #2D58CB
+			background: rgba(0, 0, 0, 0.75)
 			opacity: 0.8
 			position: absolute
 			top: 0
